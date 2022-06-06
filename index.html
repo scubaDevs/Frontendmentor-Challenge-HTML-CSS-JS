@@ -18,18 +18,36 @@
           <a href="#"><img src="./images/logo.svg" alt="Snap logo"/></a>
         
         </li>  
-        <li class="itemmenu_container itemmenu1">
+        <li class="itemmenu_container" data-dropdown >
         
-          <a class='anchorhover' href="#"> Features</a>
-          <img  class="arrowdown" src="./images/icon-arrow-down.svg" alt="arrow down to show submenu">
+          <a class='anchorhover' href="#" data-dropdown-active = "dropdownmenu"> Features</a>
+          <img  class="arrowdown" data-arrow = 'arrow1' src="./images/icon-arrow-down.svg" alt="arrow down to show submenu" >
+          <div class="dropdownmenu">
+              <img src="./images/icon-todo.svg" alt="to do icon">
+              <p class="dropdownitem">To do List</p>
+              <img src="./images/icon-calendar.svg" alt="calendar icon">
+              <p class="dropdownitem">Calendar</p>
+              <img src="./images/icon-reminders.svg" alt="remiders icon">
+              <p class="dropdownitem">Reminders</p>
+              <img src="./images/icon-planning.svg" alt="planning icon">
+              <p class="dropdownitem">Planning</p>
+          </div>
         
         </li>
-        <li class="itemmenu_container itemmenu2">
+        <li class="itemmenu_container itemmenu2" data-dropdown>
         
-          <a class='anchorhover' href="#">Company</a>
+          <a class='anchorhover' href="#" data-dropdown-active = "dropdownmenu2">Company</a>
          
-          <img class="arrowdown" src="./images/icon-arrow-down.svg" alt="arrow down to show submenu">
-        
+          <img class="arrowdown" data-arrow = 'arrow2' src="./images/icon-arrow-down.svg" alt="arrow down to show submenu">
+          <div class="dropdownmenu2">
+
+            <p class="dropdownitem">History</p>
+  
+            <p class="dropdownitem">Our Team</p>
+       
+            <p class="dropdownitem">Blog</p>
+           
+        </div>
          
         
         </li>
@@ -97,6 +115,6 @@
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Leandro Gehlen</a>.
     </div>
-    <script type="text/javascript" src="./script.js"> </script>
+    <script type="text/javascript" src="/script.js"> </script>
   </body>
 </html>

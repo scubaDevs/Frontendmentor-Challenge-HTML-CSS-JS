@@ -93,19 +93,22 @@ text-decoration: none;
     justify-content: center;
     align-items: center;
     margin: 2.5rem;
+    position: relative;
  
  
   
 }
 .itemmenu_container:hover{
     cursor: pointer;
+
 }
-.itemmenu_container .anchorhover{
+.anchorhover{
     text-decoration: none;
     color:var(--MediumGray);
  
 }
-.itemmenu_container:hover .anchorhover{
+.anchorhover:focus,
+.anchorhover:hover{
     color: var(--AlmostBlack);
     
 }
@@ -119,7 +122,56 @@ text-decoration: none;
 .itemmenu_container:hover .arrowdown {
     color:var(--AlmostBlack);
 }
+.dropdownmenu{
+    position:absolute;
+    
+    top: calc(100% + .25rem);
+    display: grid;
+    grid-template-columns: 25px 75px;
+    gap: 15px 10px;
+    justify-content: center;
+    align-content: center;
+    width: 150px;
+    height: 160px;
+   box-shadow: 2px 5px 15px rgba(0,0,0,.1);
+    background-color: white;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition:opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    pointer-events: none;
+    
+}
 
+
+.dropdownitem{
+    font-size: 14px;
+    color: var(--MediumGray);
+}
+.dropdownmenu2{
+    position: absolute;
+    top: calc(100% + .25rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 120px;
+    height: 130px;
+    gap: 20px;
+   box-shadow: 2px 5px 15px rgba(0,0,0,.1);
+    background-color: white;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition:opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    pointer-events: none;
+}
+.active{
+    opacity:1;
+    transform:translateY(0);
+    pointer-events: auto;
+}
 .herocontainer{
    
     margin-left:6rem;
@@ -140,7 +192,7 @@ text-decoration: none;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 130px;
+    margin-top: 150px;
     
 
 }
@@ -148,7 +200,7 @@ text-decoration: none;
     width: 31.25rem;
     height: 8.75rem;
     font-size: 4.25rem;
-    margin-bottom:4.375rem;
+    margin-bottom:4.25rem;
     
 }
 .heroparagraph{
@@ -171,6 +223,7 @@ margin-bottom: 60px;
  align-items: center;
  text-decoration: none;
 }
+
 .herobtn:hover{
    
      color:var(--AlmostBlack);
